@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/discogs.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="./jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/discogs.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div id="wrap"> 
+    <div class="header-area">
+        <div class="logo-box"></div>
+
+        <!-- 햄버거버튼 -->
+        <a href="#none" id="hamburger">
+            <span></span><span></span>
+        </a>
+        <div class="hamburger-box">
+            <div class="hamburger-tab">
+                <a href="#none" class="hamburer-menu">둘러보기</a>
+            </div>
+            <div class="hamburger-tab">
+                <a href="#none" class="hamburer-menu">마켓플레이스</a>
+            </div>
+            <div class="hamburger-tab">
+                <a href="#none" class="hamburer-menu">커뮤니티</a>
+            </div>
+        </div>
+        <!-- 메뉴박스 -->
+        <ul class="main-menu">
+            <li data-alt="tab1" class="tab tab-1">
+                <a href="#none" class="menu">둘러보기
+                    <div class="play-btn">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M57.9611 38.2635C59.3048 39.0313 59.3048 40.9687 57.9611 41.7365L21.9923 62.2901C20.659 63.052 19 62.0893 19 60.5536L19 19.4463C19 17.9107 20.659 16.948 21.9923 17.7099L57.9611 38.2635Z" stroke="none" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                    </div>
+                </a>
+            </li>
+            <li data-alt="tab2" class="tab tab-2">
+                <a href="#none" class="menu">마켓플레이스
+                    <div class="play-btn">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M57.9611 38.2635C59.3048 39.0313 59.3048 40.9687 57.9611 41.7365L21.9923 62.2901C20.659 63.052 19 62.0893 19 60.5536L19 19.4463C19 17.9107 20.659 16.948 21.9923 17.7099L57.9611 38.2635Z" stroke="none" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                    </div>
+                </a>
+            </li>
+            <li data-alt="tab3" class="tab tab-3">
+                <a href="#none" class="menu">커뮤니티
+                    <div class="play-btn">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M57.9611 38.2635C59.3048 39.0313 59.3048 40.9687 57.9611 41.7365L21.9923 62.2901C20.659 63.052 19 62.0893 19 60.5536L19 19.4463C19 17.9107 20.659 16.948 21.9923 17.7099L57.9611 38.2635Z" stroke="none" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                    </div>      
+                </a>
+            </li>
+        </ul>
+
+        <!-- 서브메뉴 박스 -->
+        <div class="sub-menu-box">
+
+            <!-- tab1서브메뉴 -->
+            <ul id="tab1" class="sub-menu sub-menu1">
+                <li class="sub-in-box">
+                    <a href="#none" class="sub-menu-tab1">
+                        <ul class="sub-menu-head">
+                            <a href="#none">발견</a>
+                            <li class="sub-menu-body">
+                                <a href="#none">모두 두러보기</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">인기 상승 중인 릴리스</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">목록 둘러보기</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">고급 검색</a></li>
+                        </ul>
+                    </a>
+                    <a href="#none" class="sub-menu-tab1">
+                        <ul class="sub-menu-head">
+                            <a href="#none">기여</a>
+                            <li class="sub-menu-body">
+                                <a href="#none">제출 가이드라인</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">릴리스 제출</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">목록 만드는 방법</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">월간 leaderboard</a></li>
+                        </ul>
+                    </a>
+                    <a href="#none" class="sub-menu-tab1">
+                        <ul class="sub-menu-head">
+                            <a href="#none">장르</a>
+                            <li class="sub-menu-body">
+                                <a href="#none">클래식</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">재즈</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">팝</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">발라드</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">R&B</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">힙합</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">락</a></li>
+                        </ul>
+                    </a>
+                    <a href="#none" class="sub-menu-tab1">
+                        <ul class="sub-menu-head">
+                            <a href="#none">스타일</a>
+                            <li class="sub-menu-body">
+                                <a href="#none">하우스</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">펑크</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">소울</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">실험</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">프로그레시브 락</a></li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+
+
+            <!-- tab2서브메뉴 -->
+            <ul id="tab2" class="sub-menu sub-menu2">
+                <li class="sub-in-box">
+                    <a href="#none" class="sub-menu-tab1">
+                        <ul class="sub-menu-head">
+                            <a href="#none">발견</a>
+                            <li class="sub-menu-body">
+                                <a href="#none">모두 두러보기</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">인기 상승 중인 릴리스</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">목록 둘러보기</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">고급 검색</a></li>
+                        </ul>
+                    </a>
+                    <a href="#none" class="sub-menu-tab1">
+                        <ul class="sub-menu-head">
+                            <a href="#none">장르</a>
+                            <li class="sub-menu-body">
+                                <a href="#none">클래식</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">재즈</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">팝</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">발라드</li>
+                            <li class="sub-menu-body">
+                                <a href="#none">R&B</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">힙합</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">락</a></li>
+                        </ul>
+                    </a>
+                    <a href="#none" class="sub-menu-tab1">
+                        <ul class="sub-menu-head">
+                            <a href="#none">스타일</a>
+                            <li class="sub-menu-body">
+                                <a href="#none">하우스</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">펑크</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">소울</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">실험</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">프로그레시브 락</a></li>
+                        </ul>
+                    </a>
+                    <a href="#none" class="sub-menu-tab1">
+                        <ul class="sub-menu-head">
+                            <a href="#none">음악 구매</a>
+                            <li class="sub-menu-body">
+                                <a href="#none">모든 품목</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">원하는 품목</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">구매</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">장바구니</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">레코드 스토어</a></li>
+                        </ul>
+                    </a>
+                    <a href="#none" class="sub-menu-tab1">
+                        <ul class="sub-menu-head">
+                            <a href="#none">음악 판매</a>
+                            <li class="sub-menu-body">
+                                <a href="#none">판매 시작</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">판매 품목 등록</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">주문</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">인벤토리</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">청구</a></li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+
+
+            <!-- tab3서브메뉴 -->
+            <ul id="tab3" class="sub-menu sub-menu3">
+                <li class="sub-in-box">
+                    <a href="#none" class="sub-menu-tab1">
+                        <ul class="sub-menu-head">
+                            <a href="#none">커뮤니티</a>
+                            <li class="sub-menu-body">
+                                <Discogs href="#none">Discogs Digs</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">친구</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">커뮤니티 가이드라인</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">데이터베이스 가이드라인</a></li>
+                            <li class="sub-menu-body">
+                                <a href="#none">레코드 스토어</a></li>
+                        </ul>
+                    </a>
+                </li>    
+            </ul>
+        </div>
+        
+        <!-- 장바구니,로그인 박스 -->
+        <div class="icon-box">
+            <div class="cart-box">
+                <div class="cart-icon">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://  www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M65.8769 20.9998C68.4791 20.9998 70.3886 23.4453 69.7574 25.9699L64.7574 45.9699C64.3123 47.7506 62.7123 48.9998 60.8769 48.9998H29.1231C27.2876 48.9998 25.6877 47.7506 25.2425 45.9699L20.2425 25.9699C19.6113 23.4453 21.5208 20.9998 24.1231 20.9998H65.8769Z" fill="#000000" />
+                    <path d="M26.0403 61.5305C26.4421 63.1379 28.0709 64.1151 29.6783 63.7133C31.2857 63.3114 32.263 61.6826 31.8611 60.0753L26.0403 61.5305ZM17 13L19.9104 12.2724C19.5766 10.9369 18.3766 10 17 10V13ZM9 10C7.34315 10 6 11.3431 6 13C6 14.6569 7.34315 16 9 16V10ZM30.419 58C28.7621 58 27.419 59.3431 27.419 61C27.419 62.6569 28.7621 64 30.419 64V58ZM60.581 64C62.2379 64 63.581 62.6569 63.581 61C63.581 59.3431 62.2379 58 60.581 58V64ZM31.8611 60.0753L19.9104 12.2724L14.0896 13.7276L26.0403 61.5305L31.8611 60.0753ZM17 10H9V16H17V10ZM30.419 64H60.581V58H30.419V64Z" fill="#000000" />
+                    <path d="M26.4019 61.4988C28.0096 60.5706 29.9904 60.5706 31.5981 61.4988C33.2058 62.427 34.1962 64.1424 34.1962 65.9988C34.1962 67.8552 33.2058 69.5706 31.5981 70.4988C29.9904 71.427 28.0096 71.427 26.4019 70.4988C24.7942 69.5706 23.8038 67.8552 23.8038 65.9988C23.8038 64.1424 24.7942 62.427 26.4019 61.4988Z" fill="#000000" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M59.4019 61.4988C61.0096 60.5706 62.9904 60.5706 64.5981 61.4988C66.2058 62.427 67.1962 64.1424 67.1962 65.9988C67.1962 67.8552 66.2058 69.5706 64.5981 70.4988C62.9904 71.427 61.0096 71.427 59.4019 70.4988C57.7942 69.5706 56.8038 67.8552 56.8038 65.9988C56.8038 64.1424 57.7942 62.427 59.4019 61.4988Z" fill="#000000" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                </div>
+            </div>    
+            <div class="login-box">
+                <a href="#none" class="btn login"><li>로그인</li></a>
+            </div>    
+        </div>
+    </div>
+
+    <!-- 메인배너 -->
+    <div class="main-banner">
+        <div class="in-box">
+            <div class="box-1">
+                <div class="main-banner-text text-box1">
+                    <h1>The Best-Selling Records on Discogs Right Now</h1>
+                </div>
+            </div>
+            <div class="box-2">
+                <div class="top-box">
+                    <div class="main-banner-text text-box2">
+                        <h3>25 Most Expensive Items Sold in March</h3>
+                    </div>
+                </div>
+                <div class="bot-box">
+                    <div class="main-banner-text text-box3">
+                        <h3>Learn More About the Extraordinary Woman of Jazz</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 스와이퍼 배너 -->
+    <div class="swiper-banner">
+        <div class="lp">
+            <div class="needle">
+                <img src="./img/needle.png" alt="">
+            </div>
+            <div class="lp-img-box">
+                <div class="lp-img-in">
+                    <div class="lp-img lp1 active">
+                        <img src="./img/lp.png" alt="" class="lp-in">
+                    </div>
+                    <div class="lp-img lp2">
+                        <img src="./img/lp.png" alt="" class="lp-in">
+                    </div>
+                </div>    
+            </div>    
+        </div>
+        <div class="swiper-box">
+            <div class="swiper mySwiper banner-swiper">
+                <div class="swiper-wrapper">
+
+                   <!-- 슬라이드1 -->
+                  <div class="swiper-slide slider1">
+                    <div class="text-box">
+                        <h3>인기 상승 중인 릴리스</h3>
+                    </div>
+                    <div class="swiper-in-box">
+                        <div class="s-box s-box-1">
+                            <div class="img-box"><img src="./img/lana del ray vinyl.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>The Grants</p></div>
+                                <div class="b-t"><p>Lana Del Rey</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-2">
+                            <div class="img-box"><img src="./img/joji.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Glimpse Of Us</p></div>
+                                <div class="b-t"><p>Joji</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-3">
+                            <div class="img-box"><img src="./img/the weeknd.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Blinding Lights</p></div>
+                                <div class="b-t"><p>The Weeknd</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-4">
+                            <div class="img-box"><img src="./img/now,now.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Threads</p></div>
+                                <div class="b-t"><p>Now,Now</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-5">
+                            <div class="img-box"><div class="img-box"><img src="./img/lana del ray vinyl.jpg" alt=""></div></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>The Grants</p></div>
+                                <div class="b-t"><p>Lana Del Rey</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-6">
+                            <div class="img-box"><img src="./img/joji.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Glimpse Of Us</p></div>
+                                <div class="b-t"><p>Joji</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-7">
+                            <div class="img-box"><img src="./img/the weeknd.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Blinding Lights</p></div>
+                                <div class="b-t"><p>The Weeknd</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-8">
+                            <div class="img-box"><img src="./img/now,now.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Threads</p></div>
+                                <div class="b-t"><p>Now,Now</p></div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+
+                  <!-- 슬라이드2 -->
+                  <div class="swiper-slide slider2">
+                    <div class="text-box">
+                        <h3>이 달에 가장 비싸게 팔린 릴리스</h3>
+                    </div>
+                    <div class="swiper-in-box">
+                        <div class="s-box s-box-1">
+                            <div class="img-box"><img src="./img/Julian Jay Savarin.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Waiters On The Dance</p></div>
+                                <div class="b-t"><p>Julian Jay Savarin</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-2">
+                            <div class="img-box"><img src="./img/Creedence Clearwater Revival.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Absolute Originals</p></div>
+                                <div class="b-t"><p>Creedence Clearwater</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-3">
+                            <div class="img-box"><img src="./img/jay z.png" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Watch The Throne</p></div>
+                                <div class="b-t"><p>Jay Z* & Kanye West</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-4">
+                            <div class="img-box"><img src="./img/Complete Philips Recordings.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>The Great Gatsby</p></div>
+                                <div class="b-t"><p>Arthur Grumiaux</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-5">
+                            <div class="img-box"><div class="img-box"><img src="./img/lana del ray vinyl.jpg" alt=""></div></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>The Grants</p></div>
+                                <div class="b-t"><p>Various</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-6">
+                            <div class="img-box"><img src="./img/joji.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Glimpse Of Us</p></div>
+                                <div class="b-t"><p>Joji</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-7">
+                            <div class="img-box"><img src="./img/the weeknd.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Blinding Lights</p></div>
+                                <div class="b-t"><p>The Weeknd</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-8">
+                            <div class="img-box"><img src="./img/now,now.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Threads</p></div>
+                                <div class="b-t"><p>Now,Now</p></div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+
+
+                  <!-- 슬라이드3 -->
+                  <div class="swiper-slide slider3">
+                    <div class="text-box">
+                        <h3>새로 추가된 항목 둘러보기</h3>
+                    </div>
+                    <div class="swiper-in-box">
+                        <div class="s-box s-box-1">
+                            <div class="img-box"><img src="./img/lana del ray vinyl.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>The Grants</p></div>
+                                <div class="b-t"><p>Lana Del Rey</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-2">
+                            <div class="img-box"><img src="./img/joji.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Glimpse Of Us</p></div>
+                                <div class="b-t"><p>Joji</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-3">
+                            <div class="img-box"><img src="./img/the weeknd.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Blinding Lights</p></div>
+                                <div class="b-t"><p>The Weeknd</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-4">
+                            <div class="img-box"><img src="./img/now,now.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Threads</p></div>
+                                <div class="b-t"><p>Now,Now</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-5">
+                            <div class="img-box"><div class="img-box"><img src="./img/lana del ray vinyl.jpg" alt=""></div></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>The Grants</p></div>
+                                <div class="b-t"><p>Lana Del Rey</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-6">
+                            <div class="img-box"><img src="./img/joji.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Glimpse Of Us</p></div>
+                                <div class="b-t"><p>Joji</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-7">
+                            <div class="img-box"><img src="./img/the weeknd.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Blinding Lights</p></div>
+                                <div class="b-t"><p>The Weeknd</p></div>
+                            </div>
+                        </div>
+                        <div class="s-box s-box-8">
+                            <div class="img-box"><img src="./img/now,now.jpg" alt=""></div>
+                            <div class="s-text-box">
+                                <div class="t-t"><p>Threads</p></div>
+                                <div class="b-t"><p>Now,Now</p></div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next swiper-btn-n"></div>
+                <div class="swiper-button-prev swiper-btn-p"></div>
+            </div>
+        </div>    
+    </div>
+
+
+    <!-- 장르별 추천앨범 -->
+    <div class="album-banner">
+        <div class="header-text"><p>ALBUM</p></div>
+        <div class="genre-btn">
+            <a href="#none" data-alt="Classical-swiper" class="genre active"><p>Classical</p></a>
+            <a href="#none" data-alt="Rock-swiper" class="genre"><p>Rock</p></a>
+            <a href="#none" data-alt="POP-swiper" class="genre"><p>POP</p></a>
+            <a href="#none" data-alt="Jazz-swiper" class="genre"><p>Jazz</p></a>
+        </div>
+
+
+        <div class="album-swiper">
+
+            <div class="album-next swiper-button-next"></div>
+            <div class="album-prev swiper-button-prev"></div>
+            <!-- 클래식 -->
+            <div id="Classical-swiper" class=" album-swiper-box active">
+                <div class="Classical swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="album-swiper-inner">
+                            <div class="img-box"><img src="./img/disney.jpg" alt=""></div>
+                            <div class="txt-box">
+                                <ul class="t-t">The Royal Philharmonic Orchestra – Disney Goes Classical</ul>
+                                <ul class="b-t">장르:Classical<br>스타일:Classical<br>연도:2020</ul>
+                                <a href="#none" class="more-btn">더보기<div class="arrow">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                        <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                      </svg>
+                                </div></a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="album-swiper-inner">
+                            <div class="img-box"><img src="./img/Spirited Away.jpg" alt=""></div>
+                            <div class="txt-box">
+                                <ul class="t-t">센과 치히로의 행방불명 – 히사이 조</ul>
+                                <ul class="b-t">장르:Classical<br>스타일:Soundtrack<br>연도:2020</ul>
+                                <a href="#none" class="more-btn">더보기<div class="arrow">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                        <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                      </svg>
+                                </div></a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="album-swiper-inner">
+                            <div class="img-box"><img src="./img/star wars.jpg" alt=""></div>
+                            <div class="txt-box">
+                                <ul class="t-t">The London Symphony Orchestra – Star Wars</ul>
+                                <ul class="b-t">장르:Classical<br>스타일:Soundtrack<br>연도:1977</ul>
+                                <a href="#none" class="more-btn">더보기<div class="arrow">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                        <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                      </svg>
+                                </div></a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+
+            <!-- 락 -->
+            <div id="Rock-swiper" class=" album-swiper-box">
+                <div class="Rock swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="album-swiper-inner">
+                              <div class="img-box"><img src="./img/The Beatles Road.jpg" alt=""></div>
+                              <div class="txt-box">
+                                  <ul class="t-t">The Beatles – Abbey Road</ul>
+                                  <ul class="b-t">장르:	Rock<br>스타일:Pop Rock<br>연도:1969</ul>
+                                  <a href="#none" class="more-btn">더보기<div class="arrow">
+                                      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                          <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        </svg>
+                                  </div></a>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="album-swiper-inner">
+                              <div class="img-box"><img src="./img/Pink Floyd.jpg" alt=""></div>
+                              <div class="txt-box">
+                                  <ul class="t-t">Pink Floyd – The Dark Side Of The Moon</ul>
+                                  <ul class="b-t">장르:Rock<br>스타일:Prog Rock<br>연도:2020</ul>
+                                  <a href="#none" class="more-btn">더보기<div class="arrow">
+                                      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                          <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        </svg>
+                                  </div></a>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="album-swiper-inner">
+                              <div class="img-box"><img src="./img/nirvana.jpg" alt=""></div>
+                              <div class="txt-box">
+                                  <ul class="t-t">Nirvana – Nevermind</ul>
+                                  <ul class="b-t">장르:Rock<br>스타일:Grunge<br>연도:1991</ul>
+                                  <a href="#none" class="more-btn">더보기<div class="arrow">
+                                      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                          <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        </svg>
+                                  </div></a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>  
+                  </div>
+            </div>
+
+
+            <!-- 팝 -->
+            <div id="POP-swiper" class=" album-swiper-box">
+                <div class="POP swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="album-swiper-inner">
+                                <div class="img-box"><img src="./img/Michael Jackson.jpg" alt=""></div>
+                                <div class="txt-box">
+                                    <ul class="t-t">Michael Jackson – Thriller</ul>
+                                    <ul class="b-t">장르:Funk<br>스타일:R&B<br>연도:1982</ul>
+                                    <a href="#none" class="more-btn">더보기<div class="arrow">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                            <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                          </svg>
+                                    </div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="album-swiper-inner">
+                                <div class="img-box"><img src="./img/Billie Eilish.jpg" alt=""></div>
+                                <div class="txt-box">
+                                    <ul class="t-t">Billie Eilish – When We All Fall Asleep, Where Do We Go?</ul>
+                                    <ul class="b-t">장르:Electronic<br>스타일:Trap<br>연도:2019</ul>
+                                    <a href="#none" class="more-btn">더보기<div class="arrow">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                            <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                          </svg>
+                                    </div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="album-swiper-inner">
+                                <div class="img-box"><img src="./img/born to die.jpg" alt=""></div>
+                                <div class="txt-box">
+                                    <ul class="t-t">Lana Del Rey – Born To Die</ul>
+                                    <ul class="b-t">장르:Rock,Pop<br>스타일:Baroque Pop<br>연도:2012</ul>
+                                    <a href="#none" class="more-btn">더보기<div class="arrow">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                            <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                          </svg>
+                                    </div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+
+            <!-- 재즈 -->
+            <div id="Jazz-swiper" class=" album-swiper-box">
+                <div class="Jazz swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="album-swiper-inner">
+                            <div class="img-box"><img src="./img/chet baker.png" alt=""></div>
+                            <div class="txt-box">
+                                <ul class="t-t">Chet Baker – Chet Baker Sings</ul>
+                                <ul class="b-t">장르:Jazz<br>스타일:Cool Jazz<br>연도:1956</ul>
+                                <a href="#none" class="more-btn">더보기<div class="arrow">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                        <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                      </svg>
+                                </div></a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="album-swiper-inner">
+                            <div class="img-box"><img src="./img/Miles Davis.jpg" alt=""></div>
+                            <div class="txt-box">
+                                <ul class="t-t">Miles Davis – Kind Of Blue</ul>
+                                <ul class="b-t">장르:Jazz<br>스타일:Modal<br>연도:1959</ul>
+                                <a href="#none" class="more-btn">더보기<div class="arrow">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                        <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                      </svg>
+                                </div></a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="album-swiper-inner">
+                            <div class="img-box"><img src="./img/Vince Guaraldi.jpg" alt=""></div>
+                            <div class="txt-box">
+                                <ul class="t-t">Vince Guaraldi – A Charlie Brown Christmas</ul>
+                                <ul class="b-t">장르:Jazz<br>스타일:Cool Jazz<br>연도:1965</ul>
+                                <a href="#none" class="more-btn">더보기<div class="arrow">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M36.9644 17.7002C36.9654 16.0433 38.3095 14.7011 39.9663 14.7021C41.6232 14.7032 42.9654 16.0472 42.9644 17.7041L36.9644 17.7002ZM39.9643 17.7776L42.9643 17.7795V17.7795L39.9643 17.7776ZM39.9637 18.6665L36.9637 18.6645V18.6645L39.9637 18.6665ZM39.9631 19.5554L42.9631 19.5573L39.9631 19.5554ZM39.9626 20.4443L42.9626 20.4462V20.4462L39.9626 20.4443ZM39.962 21.3331L36.962 21.3312V21.3312L39.962 21.3331ZM39.9614 22.222L36.9614 22.222L36.9614 22.2201L39.9614 22.222ZM42.9614 42.296C42.9614 43.9529 41.6182 45.296 39.9614 45.296C38.3045 45.296 36.9614 43.9529 36.9614 42.296L42.9614 42.296ZM36.9614 42.3331C36.9614 40.6763 38.3045 39.3331 39.9614 39.3331C41.6183 39.3331 42.9614 40.6763 42.9614 42.3331L36.9614 42.3331ZM42.9614 63.9998C42.9614 65.6567 41.6182 66.9998 39.9614 66.9998C38.3045 66.9998 36.9614 65.6567 36.9614 63.9998L42.9614 63.9998ZM42.9644 17.7041L42.9643 17.7795L36.9643 17.7756L36.9644 17.7002L42.9644 17.7041ZM42.9643 17.7795L42.9637 18.6684L36.9637 18.6645L36.9643 17.7756L42.9643 17.7795ZM42.9637 18.6684L42.9631 19.5573L36.9631 19.5534L36.9637 18.6645L42.9637 18.6684ZM42.9631 19.5573L42.9626 20.4462L36.9626 20.4423L36.9631 19.5534L42.9631 19.5573ZM42.9626 20.4462L42.962 21.3351L36.962 21.3312L36.9626 20.4423L42.9626 20.4462ZM42.962 21.3351L42.9614 22.224L36.9614 22.2201L36.962 21.3312L42.962 21.3351ZM42.9614 22.222L42.9614 42.296L36.9614 42.296L36.9614 22.222L42.9614 22.222ZM42.9614 42.3331L42.9614 63.9998L36.9614 63.9998L36.9614 42.3331L42.9614 42.3331Z" fill="#fff" />
+                                        <path d="M15.1104 39.1106L36.287 17.934C38.3372 15.8837 41.6614 15.8837 43.7116 17.934L64.8882 39.1106" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                      </svg>
+                                </div></a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>    
+    </div>
+
+
+    <!-- 모바일 앱 광고-->
+    <div class="app-banner">
+        <div class="app-img"><img src="./img/phones.png" alt=""></div>
+        <div class="app-text">
+            <div class="t-text">어디에나 있습니다!</div>
+            <div class="m-text">공식 Discogs 앱</div>
+            <div class="b-text">지금 무료로 다운로드하세요</div>
+            <div class="apps-img">
+                <div class="apple app">
+                    <img src="./img/app-store-badge.svg" alt="">
+                </div>
+                <div class="google app">
+                    <img src="./img/google-play-badge.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div class="footer">
+            <div class="t-footer">
+                <div class="footer-text-box">
+                    <div class="footer-in-box">
+                        <h1>Discogs</h1>
+                        <div class="in-text">Discogs 정보</div>
+                        <div class="in-text">Discogs Digs 채용</div>
+                        <div class="in-text">API</div>
+                    </div>
+                    <div class="footer-in-box">
+                        <h1>저희가 도와드리겠습니다.</h1>
+                        <div class="in-text">도움말 및 지원</div>
+                        <div class="in-text">포럼</div>
+                        <div class="in-text">바로 가기 키</div>
+                        <div class="in-text">데이터베이스 가이드라인</div>
+                        <div class="in-text">Discogs 배송</div>
+                    </div>
+                    <div class="footer-in-box">
+                        <h1>가입</h1>
+                        <div class="in-text">시작하기</div>
+                        <div class="in-text">가입</div>
+                        <div class="in-text">레코드 스토어</div>
+                        <div class="in-text">기여</div>
+                        <div class="in-text">릴리스 추가</div>
+                        <div class="in-text">기여자 목록</div>
+                        <div class="in-text">번역 돕기</div>
+                    </div>
+                    <div class="footer-in-box">
+                        <h1>Discogs 팔로우하기</h1>
+                        <div class="in-text">Facebook</div>
+                        <div class="in-text">Twitter</div>
+                        <div class="in-text">YouTube</div>
+                        <div class="in-text">Instagram</div>
+                        <div class="in-text">Mixcloud</div>
+                        <div class="in-text">Soundcloud</div>
+                        <div class="in-text">Pinterest</div>
+                    </div>
+                    <div class="footer-in-box">
+                        <h1>On The Go</h1>
+                        <div class="in-text img-in-text">
+                            <img src="./img/app-store-badge.svg" alt="">
+                        </div>
+                        <div class="in-text img-in-text">
+                            <img src="./img/google-play-badge.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-footer">
+                <div class="bf-text-box">
+                    <div class="logo"></div>
+                    <p>© 2023 Discogs®</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>   
+</body>
+</html>
