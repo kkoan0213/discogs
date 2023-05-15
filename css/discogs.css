@@ -720,6 +720,9 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    .app-banner{
+        height: 600px;
+    }
     .app-img{
         display: none;
     }
