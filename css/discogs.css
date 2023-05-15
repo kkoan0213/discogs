@@ -789,4 +789,55 @@
     .footer-in-box .in-text{
         display: none;
     }
+    .s-box-5,
+    .s-box-6{
+        display: none;
+    }
+    .s-box {
+    width: 180px;
+    height: 250px;
+    margin: 35px 20px;
+    cursor: pointer;
+    }
+    .swiper-in-box {
+    width: 50%;
+    margin: 0 auto;
+    }
+    .swiper-in-box{
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .banner-swiper .swiper-button-next {
+    right: 30% !important;
+    }
+    .banner-swiper .swiper-button-prev {
+    left: 30% !important;
+    }
+    .swiper-banner{
+        height: 650px;
+    }
+    .s-text-box{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* 글씨넘어가면 ...처리 */
+    }
+}
+@media (max-width: 550px){
+    .swiper-in-box {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 10px;
+    }
+
+    .s-box {
+    width: 150px;
+    height: 180px;
+    margin: 30px 15px;
+    cursor: pointer;
+    }
+    .swiper-banner{
+        height: 550px;
+    }
 }
