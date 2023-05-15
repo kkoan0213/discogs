@@ -558,6 +558,7 @@
 }
 .app-text{
     color: #fff;
+    cursor: default;
 }
 .app-text .t-text{
     font-size: 40px;
@@ -631,7 +632,7 @@
 .b-footer{
     height: 65px;
     width: 100%;
-    padding-left: 15px;
+    pafing-left: 15px;
     background-color: #3C3C3C;
     box-shadow: 0px -4px 0px #0000005d;
     display: flex;
